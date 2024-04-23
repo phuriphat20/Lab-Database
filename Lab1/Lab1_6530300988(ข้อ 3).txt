@@ -1,0 +1,50 @@
+ข้อที่ 3 
+- create database Employeee;
+- use Employeee;
+
+-  create table Employee
+    -> (
+    -> Empolyee_ID int not null auto_increment primary key,
+    -> Name varchar(80),
+    -> Job varchar(30),
+    -> Salary int,
+    -> Department_ID int not null
+    -> );
+
+- create table Department
+    -> (
+    -> Department_ID int  not null auto_increment primary key,
+    -> name varchar(30)
+    -> );
+
+-  create table Employee_Skill
+    -> (
+    -> Employee_ID int not null auto_increment,
+    -> Skill varchar(15),
+    -> primary key (Employee_ID , Skill)
+    -> );
+
+- create table Client
+    -> (
+    -> Client_ID int not null auto_increment primary key,
+    -> Name varchar(40),
+    -> Address varchar(100),
+    -> Contact_Person varchar(80),
+    -> Contact_Number char(12)
+    -> );
+
+- create table Assignment
+    -> (
+    -> Client_ID int not null,
+    -> Employee_ID int not null,
+    -> work_Date date not null,
+    -> Hours float,
+    -> primary key (Client_ID , Employee_ID , work_Date)
+    -> );
+
+
+
+
+
+
+

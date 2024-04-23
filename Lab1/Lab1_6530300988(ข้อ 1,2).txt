@@ -1,0 +1,56 @@
+ข้อที่1
+ - create database db_6530300988;
+ - use db_6530300988;
+-  create table CLASS
+    -> (
+    -> Class_ID char(6),
+    -> Course_ID char(3),
+    -> Teacher_ID char(3),
+    -> Room_ID char(4)
+    -> );
+
+- create table TEACHER
+    -> (
+    -> Teacher_ID char(3),
+    -> Teacher_Fname varchar(20),
+    -> Teacher_Lname varchar(70)
+    -> );
+
+-  create table COURSE
+    -> (
+    -> Course_ID char(3),
+    -> Course_Name varchar(70),
+    -> Course_Credit int
+    -> );
+
+- create table ROOM
+    -> (
+    -> Room_ID char(4),
+    -> Room_Type varchar(45)
+    -> );
+
+-  show tables;
+
+-----------------------------------------------------------------------------------
+
+ข้อ 2
+CLASS
+- alter table class drop column Room_ID;
+
+Room
+- alter table room add column Room_Capacty int;
+- alter table room modify Room_Type varchar(30);
+
+Course
+- alter table course add column Course_Description text after Course_Name;
+- alter table course modify  Course_Name text;
+
+Teacher
+- alter table teacher add column Teacher_Age int ;
+- alter table teacher modify Teacher_Fname varchar(30);
+
+------------------------------------------------------------------------------------
+
+
+
+

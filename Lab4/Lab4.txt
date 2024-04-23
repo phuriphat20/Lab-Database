@@ -1,0 +1,43 @@
+ข้อ 1
+     
+     -select *from Assignment;
+
+ข้อ 2
+
+   -select Name , Job , Department_ID from employee;
+
+ข้อ 3
+
+     -select Name , Contact_Number from client ;
+
+ข้อ 4
+
+     -select employee_ID , Job , Salary from employee where Salary = 16500 ;
+
+ข้อ 5
+   
+     -select distinct Skill from employee_skill ;
+
+ข้อ 6
+
+     -select count(skill) from employee_skill;
+
+ข้อ 7
+
+   -select employee_ID, count(skill) as Number_of_Skills from employee_skill group by employee_ID ;
+
+ข้อ 8
+
+   -select Employee_ID, count(skill) as Number_of_Skills from employee_skill group by employee_ID having count(skill)=1 ;
+
+ข้อ 9
+
+   -select Salary , Name as Employee_Name from Employee order by Name ;
+
+
+ข้อ 10
+
+   -select Name , Job , Salary from Employee order by Job desc , salary desc ;
+
+ข้อ 11
+   -select Employee_ID , skill from Employee_Skill order by skill desc , employee_ID desc limit 3,7 ;

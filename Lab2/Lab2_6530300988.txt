@@ -1,0 +1,75 @@
+ข้อที่ 1
+- insert into employee value (1111 , 'Somchai' , 'Programer' , 15000 , 128) , 
+(2222 , 'Wichit' , 'DBA' , 13500 ,42 ) , 
+(3333 , 'Somjai' , 'Programer' ,16500 , 42 ) , 
+(4442 , 'Pracha' , 'Salesman' , 20000 , 130) ,
+(4444 , 'Aphitsit' , 'System Administrator' ,12000 , 130 ),
+(4445 , 'Yongyut' , 'Programer' ,18000 , 128) , 
+(4446 , 'Somjit' , 'Programer' ,16500 , 128 );
+
+- select * from employee ;
+
+- insert into department value (42 , 'Finance') ,
+  ( 128 , 'Research' ),
+  (130 ,'Marketing' ),
+  (200 , 'HR') ;
+
+- select * from department ;
+
+- insert into employee_skill value (1111 , 'C'),
+  (1111 , 'Java'),
+  (1111 , 'Perl'),
+  (2222 , 'DB2'),
+  (2222 , 'MySQL'),
+  (2222 , 'Oracle'),
+  (3333 , 'Java') ,
+  (3333 , 'VB') ,
+  (4444 , 'Linux') ,
+  (4444 , 'Win NT') ,
+  (4445 , 'PHP') ,
+  (4446 , 'JSP') ;
+
+- select * from employee_skill ;
+
+- insert into client value (1 ,' ABC Company Limited ' , ' 1 Silom Rd. ' , 'Somkiat' , '02-7542589') ,
+  (2 ,' Imperial Industry ' , ' 100 Samutprakran ' , 'Kongsak' , '02-7510852') ,
+  (3 , ' Kasetsart University ' , '199 Sriracha Chonburi ' , 'Preecha ' , '038-354581' );
+
+- select * from client ;
+
+- insert into assignment value (1 , 1111 ,'2009-04-27' ,5),
+  (2 , 2222 ,'2009-05-26' ,7),
+  (3 , 5555 ,'2008-11-25' ,4.5);
+
+- select * from assignment ;
+
+
+-------------------------------------------------------------------------------------------------
+
+ข้อที่ 2 
+
+Employee
+- delete from employee where Name='Pracha';
+- update employee set Salary=20000 where Employee_ID=4445;
+- update employee set Department_ID=128 where Employee_ID=3333;
+
+Department
+- delete from department where Department_ID=200;
+- update department set Name='Research and DEvelopment ' where Department_ID=128 ;
+
+Employee_Skill
+- delete from employee_skill where Skill='MySQL';
+- delete from employee_skill where Skill='Oracle';
+- update employee_skill set Skill='NT' where Skill='Win NT';
+
+client
+- delete from client where Client_ID=3;
+- update client set Contact_Person='Uera' where Client_ID=1;
+- update client set Contact_Number='02-95555123' where Client_ID=1;
+- update client set Contact_Person='Monghol' where Client_ID=2;
+- update client set Contact_Number='02-9555985' where Client_ID=2;
+
+assignment
+- delete from assignment where Client_ID=3;
+- update assignment set Hours='8.5' where Client_ID=1;
+
